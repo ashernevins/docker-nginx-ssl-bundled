@@ -6,7 +6,7 @@ It is based on [`dockerfile/nginx`](https://registry.hub.docker.com/u/dockerfile
 
 ## Usage
 
-- Create a Dockerfile in a directory containing <your-ssl-certificate>.crt and <your-private-key>.key with the following content:
+- Create a Dockerfile in a directory containing ssl.crt and ssl.key with the following content:
 
         FROM asher/nginx-ssl-bundled
 
@@ -17,8 +17,8 @@ It is based on [`dockerfile/nginx`](https://registry.hub.docker.com/u/dockerfile
 - Add the following lines to your nginx server block
 
         ssl on;
-        ssl_certificate /etc/ssl/<your-ssl-certificate>.crt;
-        ssl_certificate_key /etc/ssl/<your-private-key>.key;
+        ssl_certificate /etc/ssl/ssl.crt;
+        ssl_certificate_key /etc/ssl/ssl.key;
 
 
 ## Notes

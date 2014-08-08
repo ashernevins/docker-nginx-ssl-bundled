@@ -1,7 +1,7 @@
 FROM dockerfile/nginx
 
-ONBUILD ADD *.crt /etc/ssl/
-ONBUILD ADD *.key /etc/ssl/
+ONBUILD ADD ./*.crt /etc/ssl/
+ONBUILD ADD ./*.key /etc/ssl/
 
 # Define mountable directories.
 VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
